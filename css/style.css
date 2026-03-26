@@ -44,6 +44,11 @@ img {
   color: var(--orange);
 }
 
+a {
+  color: var(--gray-dark);
+  transition: color 0.2s ease-in-out;
+}
+
 .masthead {
   background-color: var(--bg);
   border-bottom: 3px solid var(--gray-dark);
@@ -88,10 +93,6 @@ img {
   font-size: 20px;
 }
 
-.main-nav a {
-  color: var(--gray-dark);
-}
-
 .main-nav a:hover,
 .main-nav a.active {
   color: var(--orange);
@@ -111,10 +112,12 @@ img {
   cursor: pointer;
   font-size: 18px;
   border-radius: 4px;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
 }
 
 .btn-subscribe:hover {
   background-color: var(--orange);
+  transform: translateY(-2px);
 }
 
 .btn-search {
@@ -124,6 +127,13 @@ img {
   cursor: pointer;
   border-radius: 4px;
   color: var(--gray-dark);
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.btn-search:hover {
+  color: var(--orange);
+  border-color: var(--orange);
+  background-color: rgba(200, 75, 17, 0.05);
 }
 
 .lead-story {
@@ -183,6 +193,12 @@ img {
   cursor: pointer;
   width: fit-content;
   margin-top: 20px;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.lead-story button:hover {
+  background-color: var(--orange-lt);
+  transform: translateY(-2px);
 }
 
 .highlights {
@@ -197,7 +213,6 @@ img {
   flex: 1;
   padding: 20px;
   border-right: 1px solid var(--gray-mid);
-  cursor: pointer;
 }
 
 .highlights-news:last-child {
@@ -252,6 +267,10 @@ img {
   font-weight: bold;
 }
 
+.view-more:hover {
+  color: var(--orange-lt);
+}
+
 .news-layout {
   display: flex;
   gap: 40px;
@@ -268,6 +287,13 @@ img {
   border: 1px solid var(--border);
   padding: 20px;
   background-color: white;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .tag {
@@ -320,6 +346,7 @@ img {
   margin-bottom: 15px;
   border-bottom: 1px solid var(--border);
   padding-bottom: 15px;
+  cursor: pointer;
 }
 
 .chart-rank {
@@ -361,11 +388,13 @@ img {
   font-family: var(--font-ui);
   cursor: pointer;
   color: var(--gray-dark);
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.1s ease-in-out;
 }
 
 .genre-pill:hover {
   border-color: var(--orange);
   color: var(--orange);
+  transform: scale(1.05);
 }
 
 .agenda-section {
@@ -402,10 +431,21 @@ img {
   padding: 20px;
   border-radius: 4px;
   border: 1px solid #444;
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.agenda-card:hover {
+  transform: translateY(-4px);
+  border-color: #555;
 }
 
 .agenda-card.highlight {
   border-color: var(--orange);
+}
+
+.agenda-card.highlight:hover {
+  border-color: var(--orange-lt);
 }
 
 .card-date .day {
@@ -454,6 +494,13 @@ img {
   border: 1px solid var(--border);
   padding: 20px;
   background-color: white;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.culture-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .culture-title {
